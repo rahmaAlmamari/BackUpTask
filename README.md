@@ -128,4 +128,22 @@ BACKUP DATABASE TrainingDB TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQ
 ```
 ![Differential Backup](./images/DifferentialBackup.png)
 
+4. **Transaction Log Backup**
+```sql
+-- First make sure Recovery Model is FULL 
+ALTER DATABASE TrainingDB SET RECOVERY FULL; 
+-- Now backup the log 
+BACKUP LOG TrainingDB TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\TrainingDB_Log.trn'; 
+```
+
+![Transaction Log Backup](./images/TransactionLogBackup.png)
+
+5. **Copy-Only Backup**
+```sql
+BACKUP DATABASE TrainingDB TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\TrainingDB_CopyOnly.bak' WITH 
+COPY_ONLY; 
+```
+
+![Copy-Only Backup](./images/Copy-OnlyBackup.png)
+
 	
