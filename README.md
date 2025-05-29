@@ -70,5 +70,23 @@
 	- May lead to confusion if not properly documented.
 - Real-world scenario?
   - In a development environment, a copy-only backup is taken before testing a new feature to ensure that the current state of the database can be restored if needed. This allows developers to experiment without affecting the production backup schedule.
+	
+**5. File/Filegroup Backup:**
+
+- When it is used:
+  - A file/filegroup backup is used when only specific files or filegroups within a database need to be backed up. This is useful for large databases where only a portion of the data has changed.
+- What it includes?
+  - A file/filegroup backup includes only the specified files or filegroups, rather than the entire database. It captures the state of those specific components.
+- Pros & cons?
+  - Pros:
+	- Allows for targeted backups of specific data components.
+	- Can reduce backup time and storage requirements for large databases.
+	- Useful for databases with large filegroups that do not change frequently.
+  - Cons:
+	- More complex to manage and restore compared to full backups.
+	- Requires careful planning to ensure all necessary components are backed up.
+- Real-world scenario?
+  - In a data warehousing environment, a file/filegroup backup is performed on a specific filegroup that contains historical data, allowing for faster backups and restores of frequently accessed data without impacting the entire database.
+
 
 	
