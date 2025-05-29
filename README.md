@@ -37,3 +37,20 @@
 - Real-world scenario?
   - In a content management system, a differential backup is performed every hour to capture changes made to articles and user comments. This allows for quick recovery of recent changes without needing to restore the entire database.
 
+**3. Transaction Log Backup:**
+
+- When it is used:
+  - A transaction log backup is used to capture all transactions that have occurred in the database since the last transaction log backup. It is typically performed frequently to minimize data loss.
+- What it includes?
+  - A transaction log backup includes all transaction log records that have been generated since the last transaction log backup. It captures all changes made to the database.
+- Pros & cons?
+  - Pros:
+	- Allows for point-in-time recovery of the database.
+	- Requires less storage space compared to full backups.
+	- Can be performed frequently without impacting performance significantly.
+  - Cons:
+	- Requires a full backup and possibly differential backups to restore the database completely.
+	- If transaction logs are not managed properly, they can grow large and consume significant storage space.
+- Real-world scenario?
+  - In an e-commerce application, transaction log backups are performed every 15 minutes to capture all customer transactions and order updates. This ensures that the system can recover to the most recent state in case of a failure.
+	
