@@ -122,4 +122,10 @@ INSERT INTO Students VALUES (3, 'Fatma Said', '2024-01-10');
 ```
 ![Insert New Record](./images/InsertNewRow.png)
 
+3. **Differential Backup**
+```sql
+BACKUP DATABASE TrainingDB TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\TrainingDB_Diff.bak' WITH DIFFERENTIAL; 
+```
+![Differential Backup](./images/DifferentialBackup.png)
+
 	
