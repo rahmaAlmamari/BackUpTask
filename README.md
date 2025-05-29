@@ -108,6 +108,12 @@ INSERT INTO Students VALUES
 ```
 ![Create Test Database](./images/CreateTestDatabase.png)
 
+**Step 2: Perform Backup Operations**
 
+1. **Full Backup**
+```sql
+BACKUP DATABASE TrainingDB TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\TrainingDB_Full.bak'; 
+```
+![Full Backup](./images/FullBackUp.png)
 
 	
