@@ -28,7 +28,7 @@ VALUES
 --5.1. FULL BACKUP (Every Sunday at 2 AM)
 -- Save as: C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB\Full\HospitalDB_Full_YYYYMMDD.bak
 BACKUP DATABASE HospitalDB 
-TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB\Full\HospitalDB_Full_20250525.bak'
+TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB_Full_20250525.bak'
 WITH FORMAT, INIT, 
      NAME = 'Full Backup of HospitalDB', 
      SKIP, NOREWIND, NOUNLOAD, STATS = 10;
@@ -37,7 +37,7 @@ WITH FORMAT, INIT,
 --5.2. DIFFERENTIAL BACKUP (Every night at 2 AM, except Sunday)
 -- Save as: C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB\Differential\HospitalDB_Diff_YYYYMMDD.bak
 BACKUP DATABASE HospitalDB 
-TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB\Differential\HospitalDB_Diff_20250526.bak'
+TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB_Diff_20250526.bak'
 WITH DIFFERENTIAL,
      INIT, 
      NAME = 'Differential Backup of HospitalDB', 
@@ -47,7 +47,7 @@ WITH DIFFERENTIAL,
 --5.3. TRANSACTION LOG BACKUP (Every hour)
 -- Save as: C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB\Logs\HospitalDB_Log_YYYYMMDD_HHMM.trn
 BACKUP LOG HospitalDB 
-TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB\Logs\HospitalDB_Log_20250526_0100.trn'
+TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup\HospitalDB_Log_20250526_0100.trn'
 WITH INIT, 
      NAME = 'Transaction Log Backup of HospitalDB',
      SKIP, NOREWIND, NOUNLOAD, STATS = 10;
