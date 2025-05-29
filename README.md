@@ -19,3 +19,21 @@
 	- May impact database performance during the backup process.
 - Real-world scenario?
   - In a banking system, a full backup is performed daily to ensure that all transactions and account information are securely stored. This allows for quick recovery in case of data loss or corruption.
+
+**2. Differential Backup:**
+
+- When it is used:
+  - A differential backup is used to capture only the changes made to the database since the last full backup. It is typically performed more frequently than full backups to minimize data loss.
+- What it includes?
+  - A differential backup includes all data that has changed since the last full backup. It does not include data that has not changed.
+- Pros & cons?
+  - Pros:
+	- Faster to perform than full backups.
+	- Requires less storage space compared to full backups.
+	- Allows for quicker recovery since only changes since the last full backup are captured.
+  - Cons:
+	- Still requires a full backup to restore the database.
+	- If multiple differential backups are taken, restoring can be more complex.
+- Real-world scenario?
+  - In a content management system, a differential backup is performed every hour to capture changes made to articles and user comments. This allows for quick recovery of recent changes without needing to restore the entire database.
+
