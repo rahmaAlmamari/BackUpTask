@@ -116,4 +116,10 @@ BACKUP DATABASE TrainingDB TO DISK = 'C:\Program Files\Microsoft SQL Server\MSSQ
 ```
 ![Full Backup](./images/FullBackUp.png)
 
+2. **Insert New Record (simulate data change)**
+```sql
+INSERT INTO Students VALUES (3, 'Fatma Said', '2024-01-10'); 
+```
+![Insert New Record](./images/InsertNewRow.png)
+
 	
