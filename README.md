@@ -53,4 +53,22 @@
 	- If transaction logs are not managed properly, they can grow large and consume significant storage space.
 - Real-world scenario?
   - In an e-commerce application, transaction log backups are performed every 15 minutes to capture all customer transactions and order updates. This ensures that the system can recover to the most recent state in case of a failure.
+
+**4. Copy-Only Backup:** 
+
+- When it is used:
+  - A copy-only backup is used when a backup needs to be taken without affecting the sequence of regular backups. It is often used for ad-hoc backups or testing purposes.
+- What it includes?
+  - A copy-only backup includes all data files and transaction logs, similar to a full backup, but it does not affect the backup chain or sequence.
+- Pros & cons?
+  - Pros:
+	- Does not interfere with the regular backup schedule.
+	- Useful for testing or ad-hoc backups without affecting the backup chain.
+	- Can be used to create a backup for a specific purpose without impacting recovery processes.
+  - Cons:
+	- Cannot be used for regular backups as it does not maintain the backup chain.
+	- May lead to confusion if not properly documented.
+- Real-world scenario?
+  - In a development environment, a copy-only backup is taken before testing a new feature to ensure that the current state of the database can be restored if needed. This allows developers to experiment without affecting the production backup schedule.
+
 	
